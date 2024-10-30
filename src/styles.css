@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.error__alert {
+    background-color: #f870707a;
+    color: #582222;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 14px;
+}

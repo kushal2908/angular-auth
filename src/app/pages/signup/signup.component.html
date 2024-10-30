@@ -1,0 +1,37 @@
+<div class="login__form__root">
+  <div class="login__form">
+    <form
+      class="form-group"
+      [formGroup]="registrationForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <h2 tuiTitle="m" style="margin-bottom: 12px">Signup</h2>
+      <tui-input name="text" formControlName="name">
+        <input tuiTextfieldLegacy type="text" />
+        Name
+      </tui-input>
+      <tui-input
+        name="email"
+        formControlName="email"
+        aria-placeholder="Email"
+        tuiTextfieldSize="s"
+      >
+        Email
+        <input autocomplete="email" tuiTextfieldLegacy type="email" />
+      </tui-input>
+      <tui-input name="password" formControlName="password">
+        <input tuiTextfieldLegacy type="password" />
+        Password
+      </tui-input>
+      <div class="form__redirect">
+        <p>
+          Already have an account?
+          <span><a tuiLink routerLink="/login"> Login </a></span>
+        </p>
+      </div>
+      <button size="m" tuiButton type="submit" style="width: 100%">
+        Signup
+      </button>
+    </form>
+  </div>
+</div>

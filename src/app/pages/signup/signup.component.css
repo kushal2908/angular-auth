@@ -1,0 +1,38 @@
+.login__form__root {
+    height: 100vh;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__form {
+    background-color: #fff;
+    width: 320px;
+    padding: 1.5rem;
+    border: 1px solid rgb(213, 213, 213);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12;
+}
+
+.form-group>button {
+    width: 100%;
+}
+
+.form-group>tui-input {
+    margin-bottom: 12px;
+}
+
+.form__redirect {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.form__redirect span {
+    color: royalblue;
+    font-weight: 500;
+
+}

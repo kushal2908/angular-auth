@@ -1,0 +1,35 @@
+.root {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content>h2 {
+    font-size: 70px;
+    line-height: 1;
+}
+
+.content>h5 {
+    font-size: 24px;
+    color: #666;
+    line-height: 1;
+    margin-bottom: 24px;
+}
+
+.content>a {
+    text-decoration: none;
+    background-color: #fff;
+    color: black;
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: 0.3s;
+
+}
+
+.content>a:hover {
+    background-color: #888;
+    cursor: pointer;
+    color: white;
+}
