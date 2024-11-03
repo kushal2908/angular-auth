@@ -1,103 +1,20 @@
-<header
-  tuiNavigationHeader
-  style="display: flex; justify-content: space-between"
->
-  <div>NAME</div>
-  <div>
-    <button iconStart="@tui.bell" tuiIconButton type="button">
-      Notifications
-      <tui-badge-notification />
-    </button>
-    <button iconStart="@tui.ellipsis" tuiIconButton type="button">More</button>
-    <tui-avatar src="AI" />
+<div>
+  <header class="header">
+    <div class="content">
+      <h2>Logo</h2>
+      <div>
+        <button class="btn-danger" onclick="handleLogout">Logout</button>
+      </div>
+    </div>
+  </header>
+  <div class="wrapper">
+    <aside class="sidebar">
+      <div class="sidebar-content">
+        <p>Menu</p>
+      </div>
+    </aside>
+    <div class="content-body">
+      <ng-content></ng-content>
+    </div>
   </div>
-</header>
-
-<div [style.display]="'flex'">
-  <aside style="height: 100%" [tuiNavigationAside]="expanded">
-    <header>
-      <button iconStart="@tui.home" tuiAsideItem type="button">
-        <span tuiFade>Dashboard</span>
-      </button>
-    </header>
-    <button iconStart="@tui.search" tuiAsideItem type="button">Search</button>
-    <a iconStart="@tui.users" tuiAsideItem routerLink="/"> Groups </a>
-    <tui-aside-group>
-      <button
-        automation-id="setting"
-        iconStart="@tui.settings"
-        tuiAsideItem
-        tuiChevron
-        type="button"
-      >
-        Settings
-        <ng-template>
-          <button tuiAsideItem type="button">Account</button>
-          <button tuiAsideItem type="button">Notifications</button>
-          <button tuiAsideItem type="button">Privacy</button>
-        </ng-template>
-      </button>
-    </tui-aside-group>
-    <button
-      automation-id="hint"
-      iconStart="@tui.heart"
-      tuiAsideItem
-      type="button"
-    >
-      <span tuiFade>By default ellipsis is used but you can use fade too</span>
-    </button>
-    <button
-      iconEnd="@tui.chevron-right"
-      iconStart="@tui.ellipsis"
-      tuiAsideItem
-      tuiDropdownHover
-      tuiDropdownOpen
-      type="button"
-      [tuiDropdown]="more"
-    >
-      More
-      <ng-template #more let-close>
-        <tui-data-list tuiDataListDropdownManager>
-          <button iconStart="@tui.pencil" tuiAsideItem type="button">
-            Write
-          </button>
-          <button
-            iconStart="@tui.pie-chart"
-            tuiAsideItem
-            type="button"
-            [tuiDropdown]="submenu"
-          >
-            Categories
-            <ng-template #submenu>
-              <tui-data-list>
-                <button tuiAsideItem type="button" (click)="close()">
-                  Fiction (will close menu)
-                </button>
-                <button tuiAsideItem type="button">Non-Fiction</button>
-                <button tuiAsideItem type="button">Children</button>
-              </tui-data-list>
-            </ng-template>
-          </button>
-        </tui-data-list>
-      </ng-template>
-    </button>
-    <hr />
-    <button iconStart="@tui.plus" tuiAsideItem type="button">Add</button>
-    <footer>
-      <button iconStart="@tui.star" tuiAsideItem type="button">
-        Favorites
-      </button>
-      <button
-        tuiAsideItem
-        type="button"
-        [iconStart]="expanded ? '@tui.chevron-left' : '@tui.chevron-right'"
-        (click)="expanded = !expanded"
-      >
-        {{ expanded ? "Collapse" : "Expand" }}
-      </button>
-    </footer>
-  </aside>
-  <main tuiNavigationMain style="margin-top: 14px">
-    <ng-content></ng-content>
-  </main>
 </div>

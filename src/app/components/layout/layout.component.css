@@ -1,0 +1,37 @@
+.header {
+    background-color: white;
+    border-bottom: 1px solid #c2c2c2;
+}
+
+.content {
+    min-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 14px;
+
+}
+
+.wrapper {
+    display: flex;
+
+}
+
+.sidebar {
+    padding: 6px 14px;
+    width: 250px;
+    background-color: white;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4;
+}
+
+.content-body {
+    min-height: calc(100vh - 40px);
+    width: 100%;
+    background-color: #f6f6f6;
+    padding: 14px;
+}
